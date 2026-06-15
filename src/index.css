@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+/* Urdu Font */
+.font-urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Arial Unicode MS', serif;
+  line-height: 2.2 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #18181b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Scrollbar thin utility */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Override for transforms */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Urdu text direction */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Animation for save spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.animate-spin {
+  animation: spin 0.7s linear infinite;
+}
+
+/* Script paper effect */
+.script-paper {
+  background: #0a0a0b;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100% 2.5rem;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Urdu textarea */
+textarea[dir="rtl"] {
+  text-align: right;
+  font-family: 'Noto Nastaliq Urdu', serif;
+  line-height: 2;
+}
+
+/* Global dark theme */
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 640px) {
+  button {
+    -webkit-tap-highlight-color: transparent;
+    min-height: 44px;
+  }
+  
+  /* Better spacing on mobile */
+  input, textarea, select {
+    font-size: 16px;
+    min-height: 44px;
+  }
+  
+  /* Improve tap targets */
+  .px-3 { padding-left: 0.625rem; padding-right: 0.625rem; }
+  .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+}
+
+/* Responsive text sizes */
+@media (max-width: 360px) {
+  .text-sm { font-size: 0.8125rem; }
+  .text-base { font-size: 0.875rem; }
+  .px-3 { padding-left: 0.5rem; padding-right: 0.5rem; }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
