@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/urdu-platform/", // 👈 Must match your GitHub repo name exactly
+  base: "/Harf-e-Akhir/", // 👈 Must match your GitHub repo name exactly
   plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
